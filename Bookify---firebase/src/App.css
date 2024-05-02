@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "railway", sans-serif;
+}
+
+/* heading  */
+.main_heading {
+  font-size: 25px;
+  color: #724f54;
+  margin-top: 2rem;
+  padding: 2px 4px;
+  font-weight: bolder;
+  font-family: "playfair display";
+}
+.main_heading > p {
+  font-size: 12px;
+}
+.main_list > ul {
+  display: flex;
+  list-style: none;
+  padding: 2rem;
+  text-align: center;
+}
+.main_list > ul > li,
+a {
+  margin-right: 1rem;
+  padding: 0px 10px;
+  font-family: "railway";
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.623);
+  letter-spacing: 0.05em;
+}
+.main_list > ul > li,
+a:hover {
+  color: #724f54;
+  cursor: pointer;
+}
+
+/* main_sec */
+.main_sec {
+  margin-top: 2rem;
+  background-color: #f9efec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+}
+
+/* .main_sec_img{
+    background: url("https://media.istockphoto.com/id/901260610/photo/portrait-of-a-pretty-smiling-girl-reading-book-in-library.jpg?s=1024x1024&w=is&k=20&c=37m6tnEYp9JjZjqsL0ymvnX0z0rYWwqX5J9tAcdpiH8=");
+    background-position: cover;
+    background-repeat: no-repeat;
+    width: 100%; 
+    height: 80vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    justify-content: center;
+} */
+.main_sec_img {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.main_sec_img:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/415078/pexels-photo-415078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+  transition: opacity 2s ease;
+}
+
+.main_sec_img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://images.pexels.com/photos/3728084/pexels-photo-3728084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.main_sec_img:hover:before {
+  opacity: 0;
+}
+
+.main_sec_img:hover:after {
+  opacity: 1;
+}
+
+.main_sec-welcome {
+  width: 40%;
+  padding: 1rem;
+  background-color: #431a20;
+  color: white;
+  padding: 4rem;
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 2s ease forwards; /* Fade in animation */
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.main_sec-welcome > button {
+  background-color: red;
+  color: white;
+  padding: 5px 40px;
+  border: none;
+  transition: background-color 0.3s ease; /* Transition for button hover */
+}
+.main_sec-welcome > button:hover {
+  background-color: #431a20;
+  color: white;
+}
+
+/* safety_sec */
+.safety_sec {
+  margin-top: 4rem;
+  border: 2px solid black;
+  width: 70%;
+  text-align: center;
+  padding: 1rem 3rem;
+  padding-top: 2rem;
+}
+.safety_sec > h1 {
+  color: #431a20;
+  margin-top: 3rem;
+  font-family: "playfair display";
+  letter-spacing: 0.05em;
+}
+.safety_sec > p {
+  color: #431a20;
+  letter-spacing: 0.05em;
+  font-family: "railway";
+  padding: 1rem 4rem;
+}
+
+/* newArrivals */
+.newArrivals {
+  margin-top: 4rem;
+  text-align: center;
+  color: #431a20;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 2px solid black;
+  padding: 2rem 3rem;
+  width: 70%;
+}
+.newArrivals > h1 {
+  font-family: "playfair display";
+  letter-spacing: 0.05em;
+  color: #431a20;
+}
+.newArrivals > p {
+  letter-spacing: 0.05em;
+  color: #431a20;
+  width: 30%;
+}
+.newArrivals > button {
+  padding: 5px 40px;
+  border: 2px solid #431a20;
+  color: #431a20;
+}
+.newArrivals > button:hover {
+  color: white;
+  background-color: #431a20;
+}
+/* footer */
+.main_footer {
+  margin-top: 4rem;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #431a20;
+}
+
+/* Add the viewport meta tag in your HTML */
+
+/* Existing CSS styles... */
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  /* Adjustments for smaller screens */
+
+  .main_sec_img {
+    height: 60vh; /* Adjust as needed */
+  }
+
+  .main_sec-welcome {
+    width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .safety_sec,
+  .newArrivals {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .newArrivals > p {
+    width: 70%; /* Adjust width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Further adjustments for even smaller screens */
+
+  .main_sec-welcome {
+    padding: 2rem; /* Adjust padding for smaller screens */
+  }
+
+  .safety_sec,
+  .newArrivals {
+    padding: 1rem; /* Adjust padding for smaller screens */
+  }
+
+  .newArrivals > p {
+    width: 90%; /* Adjust width for even smaller screens */
+  }
+}
+
+/* Default styles */
+
+/* Navbar */
+.main_nav {
+  /* background-color: #fff; Adjust background color as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+}
+
+/* Logo and heading */
+.main_logo {
+  display: flex;
+  align-items: center;
+}
+
+.main_logo img {
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.main_heading {
+  font-size: 18px; /* Adjust font size as needed */
+  font-weight: bold;
+}
+
+.main_heading p {
+  font-size: 14px; /* Adjust font size as needed */
+  color: #888; /* Adjust color as needed */
+}
+
+/* List items */
+.main_list{
+  display: flex;
+  align-items: center ;
+}
+.main_list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.main_list li {
+  margin-right: 15px; /* Adjust margin as needed */
+}
+
+/* Links */
+.main_list a {
+  text-decoration: none;
+  color: #00000090; /* Adjust color as needed */
+  transition: color 0.3s ease; /* Add transition for smoother color change */
+  margin: 0.2rem;
+}
+
+.main_list a:hover {
+  color: #431a20; /* Adjust color as needed */
+}
+
+/* Responsive styles */
+
+/* For screens smaller than 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+  .main_nav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .main_logo {
+    margin-bottom: 10px; /* Add margin to separate logo from links */
+  }
+
+  .main_list ul {
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the start */
+  }
+
+  .main_list li {
+    margin-right: 0; /* Remove right margin for stacked links */
+    margin-bottom: 10px; /* Add bottom margin for stacked links */
+  }
+}
+
+/* For screens smaller than 480px (e.g., small mobile devices) */
+@media (max-width: 480px) {
+  .main_heading {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+
+  .main_heading p {
+    font-size: 12px; /* Decrease font size for smaller screens */
+  }
+
+  .main_list a {
+    font-size: 14px; /* Decrease font size for smaller screens */
+  }
+}
